@@ -8,10 +8,10 @@ Audits fall under the category of **security diagnostics**. Security diagnostics
 **Information security audit**: It is a _systematic, measurable, technical_ assessment of how the organization's security policy is employed. It is part of the on-going process of defining and maintaining effective security policies. This work is done through _personal interviews, reviewing policies, vulnerability scans, examination of OS settings, analyses of network shares and historical data and logs_.
 
 <table>
-<th>
-<td>The scope of the audit depends on</td>
-<td>The purpose of an audit is</td>
-</th>
+<tr>
+<th>The scope of the audit depends on</th>
+<th>The purpose of an audit is</th>
+</tr>
 <tr>
 <td>
 <ol>
