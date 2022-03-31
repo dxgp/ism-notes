@@ -44,10 +44,10 @@ There are two types of audits:
 2. **Internal audits**: Condicted by experts within the organization. It involves a feedback process where the auditor may not only audit the system but also provide limited advice. They differ from external audits in the advice part. Advice given in external audits is detailed.
 
 ### Phases of Information Security Audit
-1. **Pre-audit agreement stage**
-2. **Initiation and planning stage**
-3. **Data collection and fieldwork**
-4. **Analysis**
-5. **Reporting**
-6. **Follow through**
+1. **Pre-audit agreement stage**: The auditor and auditee agree on the scope, objective, level of support, locations, duration, finances and confidentiality parameters. A formal agreement is created that states the objectives, scope and protocol.
+2. **Initiation and planning stage**: Conducting a preliminary review of the client's environment, mission, operations, policies and practices. A risk assessment of the client environment, data and technology resources is performed after completing research on regulation, industry standards, practices and issues. Current policies are then reviewed and an _entrance meeting_ is held to review the engagement memo, request items from the client, schedule client resources and answer client questions. This is the phase where the timeline of the audit is established.
+3. **Data collection and fieldwork**: Enough evidence is acumulated in this stage to reach a conclusion related to the audit objectives and to support audit findings and recommendations. The auditor conducts interviews, observes procedures and practices and performs automated and manual tests. (This stage may be onsite or remote)
+4. **Analysis**: Once all the evidence is documented, analyses are performed to generate the audit findings. Any open issues are addressed at this stage. At the end of this stage, the auditor holds an _exit meeting_ with the client to discuss findings and recommendations, address client questions, discuss corrective actions and resolve outstanding issues. A first draft of the findings may be presented at this stage.
+5. **Reporting**: Once analysis is done, a draft of the report is generated. After incorporating any recommendations made by the client, the final report is comiled.
+6. **Follow through**: The auditor evaluates the effectiveness of the corrective action taken by the client and presents his opinion. Several follow ups may be required in complex cases. The time between the reporting anf follow up phase is dictated by the level of risk and the severity of the vulnerabilities.
 
