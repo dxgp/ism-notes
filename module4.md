@@ -7,23 +7,36 @@ Audits fall under the category of **security diagnostics**. Security diagnostics
 
 **Information security audit**: It is a _systematic, measurable, technical_ assessment of how the organization's security policy is employed. It is part of the on-going process of defining and maintaining effective security policies. This work is done through _personal interviews, reviewing policies, vulnerability scans, examination of OS settings, analyses of network shares and historical data and logs_.
 
-The scope of the audit depends on:
+<table>
+<th>
+<td>The scope of the audit depends on</td>
+<td>The purpose of an audit is</td>
+</th>
+<tr>
+<td>
+<ol>
+<li>Site business plan</li>
+<li>Type of data assets to be protected</li>
+<li>Value of importance of the data and relative priority.</li>
+<li>Previous security incidents</li>
+<li>Time available</li>
+<li>Auditors experience and expertise</li>
+</ol>
+</td>
+<td>
+<ol>
+<li>Build awareness of current practices and risks.</li>
+<li>Reducing risk, by evaluating, planning and supplementing security efforts.</li>
+<li>Strengthening controls including both automated and human.</li>
+<li>Compliance with customer and regulatory requirements and expectations.</li>
+<li>Building awareness and interaction between technology and business teams.</li>
+<li> Improving overall IT governance in the organization.</li>
+</ol>
+</td>
+</tr>
+<table>
 
-1. Site business plan
-2. Type of data assets to be protected
-3. Value of importance of the data and relative priority.
-4. Previous security incidents
-5. Time available
-6. Auditors experience and expertise
 
-The purpose of an audit is:
-
-1. Build awareness of current practices and risks.
-2. Reducing risk, by evaluating, planning and supplementing security efforts.
-3. Strengthening controls including both automated and human.
-4. Compliance with customer and regulatory requirements and expectations.
-5. Building awareness and interaction between technology and business teams.
-6. Improving overall IT governance in the organization.
 
 ### Types of Security Audits
 There are two types of audits:
