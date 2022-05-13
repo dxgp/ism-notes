@@ -104,11 +104,49 @@ The audit tasks are as follows:
 
 
 
-### Disaster Recovery Plan
-DRPs seek to quick redirect resources into restoring data and information systems in case of a disaster. To create a DRP, the following steps are followed:
+## Disaster Recovery Plan
 
-1. Create a disaster recovery team: This team will be responsible for developing, implementing and maintaining the DRP. It should identify team members and define each member's responsibilities. All employees must be made aware of the DRP.
-2. Identify and assess disaster risks: The disaster recovery team should identify and assess the risks to the organization. This will assist the team in identifying the recovery strategies and resources required to recover from disasters within an acceptable timeframe.
-3. Determine critical applications, documents and resources: The organization must evaluate elemts critical to its business. The plan should focus on short term survivability.
-4. Specify backup and off-sitestorage procedures: These procedures should identify what to back up.
-5. Test and maintain the DRP
+**Disaster recovery plans (DRPs)**: Seek to quickly redirect available resources into restoring data and information systems following a disaster. DRPs are considered as a critical subset of an entity's larger business continuity plan (BCP) which seeks to prepare for, prevent and recover from potential threats affecting an organization.
+
+**Business impact analysis (BIA)**: Identifies the imact of a sudden loss of business functions, usually quantified as cost. It also helps evaluate whether outsourcing some activities may be benificial.
+
+BCDR planning is important because:
+1. Results of the BIA identify opportunities for process improvement and ways the organization may use technology better.
+2. Information in the plan serves as a valuable source of documentation.
+3. The plan provides a single source of key contact information.
+4. It serves as a reference document for use in product planning and design, service design and delivery and other activities.
+5. An organization's improvement is driven by the BCDR process.
+
+### How to Build a BCDR Plan
+The general guidelines are as follows:
+1. Break down the process into two components: Business Continuity (BC) and Disaster Recovery (DR). 
+2. The BCP should contain contact information, change management procedures, guidelines on how and when to use the plan, step by step procedures and a schedule for reviewing, testing and updating.
+3. The DRP should contain a summary of key action steps, contact information, defined responsibilities of the DR team, guidelines on how and when to use the DRP, the DR policy statement, plan goals, incident response and recovery steps, authentication tools, geographical risks and plan history.
+4. The DRO should also take staffing into account ensuring that the staff are able to execute the steps of the plan and are always available.
+5. The plan should also take into account third parties and the services they provide. These entities must be kept in the loop and must understand how the plan works.
+6. After the organization writes the step by step procedures, the documents should consistently tested, reviewed and updated.
+
+The process follows the following steps:
+1. Risk Identification
+2. Infrastructure review
+3. Business impact analysis
+4. Plan design
+5. Plan implementation
+6. Testing
+
+### How to Build a DRP
+The steps that must be followed are:
+1. **Disaster recovery team**: The DR team will be responsible for developing, implementing and maintaining the DRP. The DRP must identify the team members along with their assigned responsibilities. All employees must be familiar with the DRP.
+2. **Risk identification**: The DR team should identify and assess the risks to the organization. This step should include items related to natural disasters, man-made emergencies and technology related incidents. This will help the team in identifying the recovery strategies and resources required to recover from the disaster in an acceptable timeframe.
+3. **Determining critical resources**: The organization must evaluate its business processes to determine which processes are absolutely necessary. The plan should focus on short term survivability rather than offer a solution to restoring the business to its full operational capacity.
+4. **Backup procedures**: These procedures should identify what to back up, by whom, how to perform the backup, location of backup and how frequently backups should occur. All critical documents must be backup up (like latest financial statements, tax returns, a current list of employees, inventory records, customer and vendor listings). Critical supplies requred for daily operation such as checks and purchase orders and a copy of the DRP should be stored at an off-sitee location.
+5. **Maintenance**: DR planning is a continual process as risks of disasters and emergencies are always changing. It's recommended that the organization routinely test the DRP to evaluate the procedures documented in the plan for effectiveness. The DRP must be constantly maintained to be effective.
+
+A DRP is defined by two factors:
+1. **Recovery Time Objective (RTO)**: Acceptable downtime for critical functions and components i.e. the maximum time it should take to restore services. Different components of the business have different RTOs.
+2. **Recovery Point Objective (RPO)**: The point to which the services must be restored following a disruption. In relation to the backup data, it specifies the oldest age the backup can have.
+
+Some standards that are relevant to BCDR planning:
+1. ISO 22301:2019: Security and reselience -- Business continuity management systems -- Requirements
+2. ISO 22313:2012: Soceital security -- Business continuity management systems -- Guidance
+3. ISO 22320:2018: Security and resilience -- Emergency management -- Guidelines for incident management

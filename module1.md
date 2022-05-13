@@ -61,3 +61,102 @@ There are different types of access controls. They are listed below:
 
 
 
+## Firewalls
+**Traffic**: Connects a computer with a web browser and a human with digital content stored on the server. Code is embedded in website to track what the user is doing.
+
+**Traffers**: People that monetize traffic.
+
+Traffers filter the traffic due to the following reasons:
+
+1. Optimization: Traffers only get paid for unique traffic.
+2. Targeting: Making sure traffic meets requirements for location, user or device type, and similar constraints.
+3. Anti-research: Making sure that security companies don't analyze the tracking mechanisms.
+
+Firewalls are of various types:
+
+1. **Stateful firewall**: Stateful firewalls monitor all aspects of the traffic streams, their characteristics and communication channels. These firewalls can integrate encryption or tunnels, identify TCP connection stages, packet state and other key status updates.
+2. **Stateless firewall**: Stateless firewalls use clues from the destination address, source and other key values to assess whether threats are present, then block or restrict those deemed untrusted. Preset rules enforce whether traffic is permitted or denied, but the system is typically unable to determine the difference between truly desired communications and sophisticated attempts to disguise unauthorized communications as trusted ones.
+3. **Packet filtering firewall**: Can filter the data packets at OSI layers 3 and 4 (network and transport). Employs an Access Control List (ACL) for monitoring the traffic.
+4. **Proxy firewall**: Filters the data at OSI layers 3-7. A software program is used to manage and filter this category of the firewall.
+5. **Address translation firewall**: Project a different IP to the outside world and prevent the revealing of internal IPs.
+6. **Host based firewall**: Devices have independent firewall programs and only work on one device.
+
+### Stateful Firewalls
+It improves the packet filtering process by monitoring the state of each connection established through a firewall device. In TCP, there are three phases to every connection: establishing, transfer and termination. In the establishing phase, the stateful firewall records each connection in the *state table* that contains information such as the source IP, destination IP, source port, destination port, TCP sequence numbers and TCP flag values. In the data transfer phase, the device monitors certain parameters in the header of the L3 packet and L4 segment and makes a decision based on these values and the contents of the state table.
+<table>
+<tr>
+    <th>Pros</th>
+    <th>Cons</th>
+</tr>
+<tr>
+    <td>Highly skilled at detecting unauthorized attempts or forged messaging.</td>
+    <td>Vulnerabilities may allow a hacker to compromise and take control over a filrewall that is not updated with the latest software.</td>
+</tr>
+<tr>
+    <td>The powerful memory retains key attributes of network connections.</td>
+    <td>Some statefil firewalls can be tricked to allow or even attract outside connections.</td>
+</tr>
+<tr>
+    <td>Do not require many ports open for proper communication.</td>
+    <td>Man in the middle attacks may pose greater vulnerabilities</td>
+</tr>
+<tr>
+    <td>Can learn from past experiences i.e. constantly improving.</td>
+    <td></td>
+</tr>
+</table>
+
+### Stateless firewalls
+<table>
+<tr>
+    <th>Pros</th>
+    <th>Cons</th>
+</tr>
+<tr>
+    <td>Deliver fast performance.</td>
+    <td>Do not inspect traffic.</td>
+</tr>
+<tr>
+    <td>Perform very well under intense traffic.</td>
+    <td>Do not examine entire packets and can be tricked.</td>
+</tr>
+<tr>
+    <td>Cheaper than stateful firewalls.</td>
+    <td>Lot of configuration required to achieve a suitable balance b/w communication and security.</td>
+</tr>
+</table>
+
+**Screening routers**: Also known as house firewalls on the network level and are used to segment the network. Two common models:
+
+1. Screened host firewalls: Use a single screening router b/w external and internal networks aka the *choke router*.
+2. Screened subnet firewalls: Two screening routers are used. One is an access router b/w the external and perimeter network and the other is a choke router placed b/t the perimeter and internal network.
+
+
+<table>
+<tr>
+    <th>Network Firewalls</th>
+    <th>Host Firewalls</th>
+</tr>
+<tr>
+    <td>Involve the application of one or more firewalls b/w the external and internal network.</td>
+    <td>Involve the application of firewalls on the individual user devices.</td>
+</tr>
+<tr>
+    <td>May come as dedicated hardware, software or virtual products.</td>
+    <td>Offered as a software service.</td>
+</tr>
+<tr>
+    <td>Only work on surface level. Don't offer deep inspection.</td>
+    <td>Can dive deeper into web traffic, filtering based on HTTP and other networking protocols.</td>
+</tr>
+<tr>
+    <td>Require configuration against a broad scope of connections.</td>
+    <td>Can be tailored to fit each machine's needs.</td>
+</tr>
+<tr>
+    <td>Don't require much customization.</td>
+    <td>Require a large amount of customization.</td>
+</tr>
+</table>
+
+## Unauthorized Devices
