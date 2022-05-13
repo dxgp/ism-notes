@@ -159,4 +159,20 @@ It improves the packet filtering process by monitoring the state of each connect
 </tr>
 </table>
 
-## Unauthorized Devices
+## Network Address Translation
+Translates private IP addresses which can be used by devices within a LAN into publicly available internet addresses. NAT is of three types:
+
+1. Static NAT: One to one mappingg b/w private and public IP address. Private IP addresses appear on the internet as the same public IP address. This is suitable for servers.
+2. Dynamic NAT: Uses a set of publicly available IP addresses successively assigning them to hosts with private IP addresses. This is suitable for client computers.
+3. Port Address Translation (PAT): This is a mapping b/w several private IP addresses and one or more public IP addresses.
+
+## Devices Used in Networking
+The following are the devices used in networking:
+
+1. Hubs: A hub receives data packets and passes on all the information it receives to all other computers connected to the hub. Information is also sent to the computer that sent the information. Note that hubs do not know anything about the data they receive. Their job is to simply forward.
+2. Switches: Unlike hubs, switches can identify the destination of a packet. They send information only to the computer that is supposed to receive the information.
+3. Routers: Routers make sure data sent over the internet goes where it needs to go and not where it is not needed. Routers look at every single packet passing through.
+4. Network bridges: Hardware device used to create a connection between two separate computer networks or to divide one network into two. It filters data traffic at a network boundary and reduces the amount of traffic on a LAN dividing it into two segments.
+5. Gateways: Gateway node acts like a proxy server and firewall. The gateway uses forwarding tables to determine where the packets are to be sent.
+6. Firewalls: Hardware or software device that protects a computer network from unauthorized access.
+7. Wireless AP
