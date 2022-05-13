@@ -1,6 +1,6 @@
-## Module 3
+# Module 3
 
-### How to Troubleshoot Firewall Problems
+## How to Troubleshoot Firewall Problems
 
 **Port**: A port is a virtual point where network connections start and end. Ports are software-based and managed by a computer's operating system. Each port is associated with a specific process or service. Ports allow computers to easily differentiate between different kinds of traffic: emails go to a different port than webpages, for instance, even though both reach a computer over the same Internet connection.
 
@@ -12,7 +12,7 @@
 5. Check if the firewall is configured to block specific IP address ranges.
 6. Use `traceroute` to check where in the connection the problem is stemming from. It may be the case that the pings are not reaching the SNMP device due to an interruption in the line.
 
-### How to Troubleshoot CISCO IOS Firewall Configurations
+## CISCO IOS Firewall
 
 ### Configuring Cisco IOS Firewall IDS
 This task consists of four subtasks:
@@ -98,3 +98,91 @@ interface e1
  ip address 172.16.57.1 255.255.255.0
  ip audit AUDIT.1 in
 ```
+
+
+### Troubleshooting
+1. Access lists can be removed using:
+```
+int <interface>
+no ip access-group (access-group-no) in|out
+```
+2. If too much traffic is being blocked, the logic used in the access list might be a problem. Permit all traffic using:
+```
+access-list (access-list-no) permit tcp any any
+access-list (access-list-no) permit udp any any
+access-list (access-list-no) permit icmp any any
+```
+Then, apply the access list using:
+```
+int <interface>
+ip access-group (access-group-no) in|out
+```
+3. Check which access lists are being used using the `show ip access-lists` command. 
+4. If the router is not a heavy traffic one, inspect traffic using the `debug` command.
+
+## Troubleshooting the Router
+To troublshoot routers:
+1. Check physical layer: Check for power issues, plugs and circuit breakers.
+2. Check interfaces: `show ip interface brief` command can beused to re-check which interfaces are being used.
+3. Ping: The `ping` and `trace` command can be used to check for connectivity issues.
+4. Checking routing: The routing table can be checked using the `show ip route` command. Verify that the routing table is correctly configured.
+5. Check firewall: Check if a firewall is configured. If it is configured, re-check the configuration.
+6. Check VPN: Check if the VPN is up using `show crypto isakmp sa` and `show crypto ipsec client ezvpn` commands.
+
+The following commands can be used on Cisco routers:
+1. `show`: This is a powerful monitoring and troubleshooting tool that can be used to monitor router behavior during installation, monitor network operation, isolate problem interfaces, determine when a network is congested and determine the status of servers, clients or other neighbors.
+
+<table>
+<tr>
+    <th>Command</th>
+    <th>Use</th>
+</tr>
+<tr>
+    <td><code>show interfaces [ethernet|fddi|atm|serial]</code></td>
+    <td>Use the show interfaces command to display statistics for all interfaces (or the specified interfaces) configured on the router or access server.</td>
+</tr>
+<tr>
+    <td><code>show controllers [mci|token|FDDI|LEX|ethernet|E1|MCI|cxbus|t1]</code></td>
+    <td>The show controllers command displays information on all of the router's controllers. However, you can specify the type of controller so that only the information on that particular controller is displayed.</td>
+</tr>
+<tr>
+    <td><code>show running-config</code></td>
+    <td>The show running-config command shows the router, switch, or firewall’s current configuration. The running-configuration is the config that is in the router’s memory. You change this config when you make changes to the router. </td>
+</tr>
+<tr>
+    <td><code>show startup-config</code></td>
+    <td>To display the contents of NVRAM (if present and valid) or to show the configuration file pointed to by the CONFIG_FILE environment variable. </td>
+</tr>
+<tr>
+    <td><code>show flash-filesystem</code></td>
+    <td>To display the layout and contents of a Flash memory file system, use the show flash-filesystem command in EXEC mode.</td>
+</tr>
+<tr>
+    <td><code>show buffers</code></td>
+    <td>To display detailed information about the buffer pools on the network server when Cisco IOS, Cisco IOS Software Modularity, or Cisco IOS XE images are running, use the show buffers command in user EXEC or privileged EXEC mode.</td>
+</tr>
+<tr>
+    <td><code>show processes memory</code></td>
+    <td>Displays memory used by processes</td>
+</tr>
+<tr>
+    <td><code>show stacks</code></td>
+    <td>Monitors the stack usage of processes and interrupt routines.</td>
+</tr>
+<tr>
+    <td><code>show version</code></td>
+    <td>Displays the configuration of the system hardware, the software version, the names and sources of configuration files, and the boot images.</td>
+</tr>
+</table>
+
+2. `debug`: This command provides various functions like traffic, error messages produced by nodes, protocol specific diagnostic packets and other troubleshooting data. To use the debug commands, enter into privelaged mode and show the possible commands using:
+
+```
+Router>enable
+Router# debug ?
+```
+It must be noted that debug commands are processor intensive.
+
+3. `ping`: Used to check host reachability and network connectivity. It also requires privilaged mode. The command sends ICMP echo messgaes.
+
+4. `trace`: The `trace user` command discovers the routes that a router's packets follow when travelling to their destinations.
