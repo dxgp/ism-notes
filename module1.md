@@ -175,4 +175,25 @@ The following are the devices used in networking:
 4. Network bridges: Hardware device used to create a connection between two separate computer networks or to divide one network into two. It filters data traffic at a network boundary and reduces the amount of traffic on a LAN dividing it into two segments.
 5. Gateways: Gateway node acts like a proxy server and firewall. The gateway uses forwarding tables to determine where the packets are to be sent.
 6. Firewalls: Hardware or software device that protects a computer network from unauthorized access.
-7. Wireless AP
+
+
+## Intrusion Detection System
+Network intrusion detection is based on monitoring the operation of computer networks and analysing the processes they perform which can point to certain incidents.
+
+Desirable characteristics of an IDS are:
+1. **Run time**: An IDS must run continuously with minimal human supervision.
+2. **Fault tolerant**: It must be able to recover from system crashes. It must also be able to recover its previous state upon startup.
+3. **Resist subversion**: The IDS must monitor itself and detect if it has been modified by an attacker.
+4. **Minimal overhead**: An IDS must impose a minimal overhead on the system where it is running.
+5. **Configurable**: An IDS must be able to be configured according to the security policies of the organization.
+6. **Adaptable**: An IDS must be able to adapt to changes in the system and user behavior over time.
+7. **Scaleable**: The IDS must be able to scale to monitor a large number of hosts.
+8. **Dynamic reconfiguration**: The IDS must be able to be reconfigured while running when monitoring a large number of hosts.
+
+There are three main classes of IDS based on detection methodology:
+1. Signature based detection: Certain attacks have a unique behavioural pattern called the *attack signature*. This can be used to detect intrusions. While this can work well for known attacks, new attacks can subvert it.
+2. Anomaly based detection: Anomaly detection is performed based on the defined profile of acceptable traffic and its comparison with the specific traffic in the network i.e. detecting unusual network flows. A lot of configuration is required for this method.
+3. Detection based on stateful protocol analysis: The process of compating predefined operation profiles with specific data flow of that protocol on the network. Unlike anomaly based IDS, the profiles are defined by the manufacturer. 
+
+## Intrusion Prevention System (IPS)
+An IPS is a network security tool that can not only detect intruders but also prevent them from successfully launching any known attack. IPSes combine the capabilities of firewalls and IDSes.
